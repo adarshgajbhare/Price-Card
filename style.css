@@ -1,0 +1,196 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* CSS */
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+@font-face {
+  font-family: "Cal Sans";
+  src: url(fonts/webfonts/CalSans-SemiBold.ttf);
+}
+/* assign the Cal Sans font-family */
+html,
+body {
+  font-family: "Cal Sans";
+}
+
+/* usage samples with adjusted letter spacings */
+h1 {
+  font-size: 56px;
+}
+h2 {
+  font-size: 40px;
+  letter-spacing: 0.01em;
+}
+h3 {
+  font-size: 36px;
+  letter-spacing: 0.015em;
+}
+h4 {
+  font-size: 28px;
+  letter-spacing: 0.02em;
+}
+h5 {
+  font-size: 20px;
+  letter-spacing: 0.03em;
+}
+h6 {
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+.quote {
+  font-size: 24px;
+  letter-spacing: 0.02em;
+}
+.smaller_cal_sans {
+  font-size: 18px;
+  letter-spacing: 0.045em;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-image: url("https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  width: 60vw;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.line {
+  border-top: 3px solid #ff8108;
+  width: 30%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.heading {
+  position: relative;
+  top: 30px;
+  text-align: center;
+}
+.heading1 {
+  margin-bottom: 5px;
+  color: white;
+  font: bold;
+  text-transform: capitalize;
+  letter-spacing: -0.06rem;
+}
+.info {
+  color: rgba(10, 9, 9, 1);
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.plans {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.card {
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  /* background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(57, 57, 65, 1) 81%
+  ); */
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  width: 30%;
+  padding: 1rem;
+}
+.rate {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 9px;
+  margin-bottom: 0.5rem;
+  color: rgba(10, 9, 9, 1);
+}
+
+.price {
+  background: #121fcf;
+  background: linear-gradient(to right, #121fcf8a 0%, #cf15128c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 900;
+  font-size: 3rem;
+}
+.other {
+  color: rgba(10, 9, 9, 1);
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+.btn {
+  margin-top: 50px;
+  position: relative;
+}
+#click {
+  top: 0;
+  background: #121fcf;
+  background: linear-gradient(to right, #121fcf8a 0%, #cf15128c 100%);
+  padding: 10px 70px;
+  border-radius: 20px;
+  color: white;
+  font: bold;
+  font-weight: 600;
+  border: none;
+}
+
+.install {
+  top: 0;
+  color: #ff8108;
+  padding: 10px 70px;
+  border-radius: 20px;
+  background-color: white;
+  font: bold;
+  font-weight: 600;
+  border: 1px solid #ff8108;
+}
+.other-info {
+  margin-top: 20px;
+  font: bold;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .plans {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
